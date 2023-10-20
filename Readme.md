@@ -1,4 +1,4 @@
-# Container benchmarks for machine-learning
+# Simple benchmarks of containers for intensive CPU, RAM, and disk usage
 
 ![Result normalized](https://docs.google.com/spreadsheets/d/e/2PACX-1vSLrwS1zMdzptNu5IUR93nNMfDCpUqBRsSorYYYFlGc7h5VseIhifaphXkaQmQxb09wN9olZlCEmo1J/pubchart?oid=42874494&format=image)
 
