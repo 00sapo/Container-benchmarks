@@ -9,29 +9,29 @@ Number of threads: 1
 Initializing random number generator from current time
 
 
-Prime numbers limit: 20000
+Prime numbers limit: 200000
 
 Initializing worker threads...
 
 Threads started!
 
 CPU speed:
-    events per second:   554.46
+    events per second:    23.17
 
 General statistics:
-    total time:                          60.0003s
-    total number of events:              33269
+    total time:                          300.0200s
+    total number of events:              6952
 
 Latency (ms):
-         min:                                    1.78
-         avg:                                    1.80
-         max:                                    6.31
-         95th percentile:                        1.86
-         sum:                                59996.16
+         min:                                   42.66
+         avg:                                   43.16
+         max:                                   61.34
+         95th percentile:                       43.39
+         sum:                               300018.58
 
 Threads fairness:
-    events (avg/stddev):           33269.0000/0.00
-    execution time (avg/stddev):   59.9962/0.00
+    events (avg/stddev):           6952.0000/0.00
+    execution time (avg/stddev):   300.0186/0.00
 
 
 FILEIO BENCHMARKS
@@ -52,127 +52,26 @@ Creating file test_file.6
 Creating file test_file.7
 Creating file test_file.8
 Creating file test_file.9
-Creating file test_file.10
-Creating file test_file.11
-Creating file test_file.12
-Creating file test_file.13
-Creating file test_file.14
-Creating file test_file.15
-Creating file test_file.16
-Creating file test_file.17
-Creating file test_file.18
-Creating file test_file.19
-Creating file test_file.20
-Creating file test_file.21
-Creating file test_file.22
-Creating file test_file.23
-Creating file test_file.24
-Creating file test_file.25
-Creating file test_file.26
-Creating file test_file.27
-Creating file test_file.28
-Creating file test_file.29
-Creating file test_file.30
-Creating file test_file.31
-Creating file test_file.32
-Creating file test_file.33
-Creating file test_file.34
-Creating file test_file.35
-Creating file test_file.36
-Creating file test_file.37
-Creating file test_file.38
-Creating file test_file.39
-Creating file test_file.40
-Creating file test_file.41
-Creating file test_file.42
-Creating file test_file.43
-Creating file test_file.44
-Creating file test_file.45
-Creating file test_file.46
-Creating file test_file.47
-Creating file test_file.48
-Creating file test_file.49
-Creating file test_file.50
-Creating file test_file.51
-Creating file test_file.52
-Creating file test_file.53
-Creating file test_file.54
-Creating file test_file.55
-Creating file test_file.56
-Creating file test_file.57
-Creating file test_file.58
-Creating file test_file.59
-Creating file test_file.60
-Creating file test_file.61
-Creating file test_file.62
-Creating file test_file.63
-Creating file test_file.64
-Creating file test_file.65
-Creating file test_file.66
-Creating file test_file.67
-Creating file test_file.68
-Creating file test_file.69
-Creating file test_file.70
-Creating file test_file.71
-Creating file test_file.72
-Creating file test_file.73
-Creating file test_file.74
-Creating file test_file.75
-Creating file test_file.76
-Creating file test_file.77
-Creating file test_file.78
-Creating file test_file.79
-Creating file test_file.80
-Creating file test_file.81
-Creating file test_file.82
-Creating file test_file.83
-Creating file test_file.84
-Creating file test_file.85
-Creating file test_file.86
-Creating file test_file.87
-Creating file test_file.88
-Creating file test_file.89
-Creating file test_file.90
-Creating file test_file.91
-Creating file test_file.92
-Creating file test_file.93
-Creating file test_file.94
-Creating file test_file.95
-Creating file test_file.96
-Creating file test_file.97
-Creating file test_file.98
-Creating file test_file.99
-Creating file test_file.100
-Creating file test_file.101
-Creating file test_file.102
-Creating file test_file.103
-Creating file test_file.104
-Creating file test_file.105
-Creating file test_file.106
-Creating file test_file.107
-Creating file test_file.108
-Creating file test_file.109
-Creating file test_file.110
-Creating file test_file.111
-Creating file test_file.112
-Creating file test_file.113
-Creating file test_file.114
-Creating file test_file.115
-Creating file test_file.116
-Creating file test_file.117
-Creating file test_file.118
-Creating file test_file.119
-Creating file test_file.120
-Creating file test_file.121
-Creating file test_file.122
-Creating file test_file.123
-Creating file test_file.124
-Creating file test_file.125
-Creating file test_file.126
-Creating file test_file.127
-161061273600 bytes written in 154.04 seconds (997.17 MiB/sec).
+FATAL: Failed to write file! errno = 28 (No space left on device)
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from seed (1).
+
+
+Extra file open flags: (none)
+128 files, 1.1719GiB each
+150GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+FATAL: Size of file 'test_file.9' is 203.7MiB, but at least 1.1719GiB is expected.
+WARNING: Did you run 'prepare' with different --file-total-size or --file-num values?
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Removing test files...
@@ -183,7 +82,7 @@ MEMORY BENCHMARKS
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
-Number of threads: 4
+Number of threads: 256
 Initializing random number generator from current time
 
 
@@ -197,25 +96,25 @@ Initializing worker threads...
 
 Threads started!
 
-Total operations: 104857600 (5905516.70 per second)
+Total operations: 104857600 (16116224.99 per second)
 
-102400.00 MiB transferred (5767.11 MiB/sec)
+102400.00 MiB transferred (15738.50 MiB/sec)
 
 
 General statistics:
-    total time:                          17.7477s
+    total time:                          6.5052s
     total number of events:              104857600
 
 Latency (ms):
          min:                                    0.00
-         avg:                                    0.00
-         max:                                    0.06
+         avg:                                    0.01
+         max:                                  303.34
          95th percentile:                        0.00
-         sum:                                58611.37
+         sum:                              1233548.92
 
 Threads fairness:
-    events (avg/stddev):           26214400.0000/0.00
-    execution time (avg/stddev):   14.6528/0.06
+    events (avg/stddev):           409600.0000/0.00
+    execution time (avg/stddev):   4.8186/0.73
 
 
 MUTEX BENCHMARKS
@@ -224,7 +123,7 @@ MUTEX BENCHMARKS
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
-Number of threads: 64
+Number of threads: 512
 Initializing random number generator from current time
 
 
@@ -234,19 +133,19 @@ Threads started!
 
 
 General statistics:
-    total time:                          0.8769s
-    total number of events:              64
+    total time:                          6.7196s
+    total number of events:              512
 
 Latency (ms):
-         min:                                  325.87
-         avg:                                  725.63
-         max:                                  857.33
-         95th percentile:                      846.57
-         sum:                                46440.22
+         min:                                  284.63
+         avg:                                 5371.02
+         max:                                 6475.83
+         95th percentile:                     6135.91
+         sum:                              2749961.27
 
 Threads fairness:
     events (avg/stddev):           1.0000/0.00
-    execution time (avg/stddev):   0.7256/0.11
+    execution time (avg/stddev):   5.3710/0.82
 
 
 THREADS BENCHMARKS
@@ -265,17 +164,17 @@ Threads started!
 
 
 General statistics:
-    total time:                          60.0007s
-    total number of events:              81689
+    total time:                          300.0007s
+    total number of events:              408559
 
 Latency (ms):
          min:                                    0.72
          avg:                                    0.73
-         max:                                    1.03
+         max:                                    1.91
          95th percentile:                        0.77
-         sum:                                59991.78
+         sum:                               299957.08
 
 Threads fairness:
-    events (avg/stddev):           81689.0000/0.00
-    execution time (avg/stddev):   59.9918/0.00
+    events (avg/stddev):           408559.0000/0.00
+    execution time (avg/stddev):   299.9571/0.00
 

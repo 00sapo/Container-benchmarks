@@ -9,29 +9,29 @@ Number of threads: 1
 Initializing random number generator from current time
 
 
-Prime numbers limit: 20000
+Prime numbers limit: 200000
 
 Initializing worker threads...
 
 Threads started!
 
 CPU speed:
-    events per second:   506.37
+    events per second:    20.89
 
 General statistics:
-    total time:                          60.0003s
-    total number of events:              30383
+    total time:                          300.0309s
+    total number of events:              6268
 
 Latency (ms):
-         min:                                    1.89
-         avg:                                    1.97
-         max:                                    6.86
-         95th percentile:                        2.07
-         sum:                                59996.78
+         min:                                   46.66
+         avg:                                   47.87
+         max:                                   70.20
+         95th percentile:                       48.34
+         sum:                               300029.77
 
 Threads fairness:
-    events (avg/stddev):           30383.0000/0.00
-    execution time (avg/stddev):   59.9968/0.00
+    events (avg/stddev):           6268.0000/0.00
+    execution time (avg/stddev):   300.0298/0.00
 
 
 FILEIO BENCHMARKS
@@ -170,8 +170,52 @@ Creating file test_file.124
 Creating file test_file.125
 Creating file test_file.126
 Creating file test_file.127
-161061273600 bytes written in 153.61 seconds (999.91 MiB/sec).
+161061273600 bytes written in 152.97 seconds (1004.15 MiB/sec).
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from seed (1).
+
+
+Extra file open flags: (none)
+128 files, 1.1719GiB each
+150GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+
+File operations:
+    reads/s:                      333.67
+    writes/s:                     222.45
+    fsyncs/s:                     711.96
+
+Throughput:
+    read, MiB/s:                  5.21
+    written, MiB/s:               3.48
+
+General statistics:
+    total time:                          300.1134s
+    total number of events:              380444
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    0.79
+         max:                                   24.59
+         95th percentile:                        3.36
+         sum:                               299642.43
+
+Threads fairness:
+    events (avg/stddev):           380444.0000/0.00
+    execution time (avg/stddev):   299.6424/0.00
 
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
@@ -183,7 +227,7 @@ MEMORY BENCHMARKS
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
-Number of threads: 4
+Number of threads: 256
 Initializing random number generator from current time
 
 
@@ -197,25 +241,25 @@ Initializing worker threads...
 
 Threads started!
 
-Total operations: 104857600 (5951277.79 per second)
+Total operations: 104857600 (15917375.00 per second)
 
-102400.00 MiB transferred (5811.79 MiB/sec)
+102400.00 MiB transferred (15544.31 MiB/sec)
 
 
 General statistics:
-    total time:                          17.6152s
+    total time:                          6.5856s
     total number of events:              104857600
 
 Latency (ms):
          min:                                    0.00
-         avg:                                    0.00
-         max:                                    0.07
+         avg:                                    0.01
+         max:                                 2003.30
          95th percentile:                        0.00
-         sum:                                59278.14
+         sum:                              1192314.42
 
 Threads fairness:
-    events (avg/stddev):           26214400.0000/0.00
-    execution time (avg/stddev):   14.8195/0.11
+    events (avg/stddev):           409600.0000/0.00
+    execution time (avg/stddev):   4.6575/0.75
 
 
 MUTEX BENCHMARKS
@@ -224,7 +268,7 @@ MUTEX BENCHMARKS
 sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
 
 Running the test with following options:
-Number of threads: 64
+Number of threads: 512
 Initializing random number generator from current time
 
 
@@ -234,19 +278,19 @@ Threads started!
 
 
 General statistics:
-    total time:                          0.8731s
-    total number of events:              64
+    total time:                          6.7334s
+    total number of events:              512
 
 Latency (ms):
-         min:                                  277.56
-         avg:                                  641.92
-         max:                                  846.27
-         95th percentile:                      802.05
-         sum:                                41083.02
+         min:                                  271.05
+         avg:                                 4686.14
+         max:                                 6413.17
+         95th percentile:                     5813.24
+         sum:                              2399304.34
 
 Threads fairness:
     events (avg/stddev):           1.0000/0.00
-    execution time (avg/stddev):   0.6419/0.12
+    execution time (avg/stddev):   4.6861/1.11
 
 
 THREADS BENCHMARKS
@@ -265,17 +309,17 @@ Threads started!
 
 
 General statistics:
-    total time:                          60.0008s
-    total number of events:              84918
+    total time:                          300.0001s
+    total number of events:              426945
 
 Latency (ms):
-         min:                                    0.68
-         avg:                                    0.71
-         max:                                    4.25
+         min:                                    0.69
+         avg:                                    0.70
+         max:                                    2.45
          95th percentile:                        0.74
-         sum:                                59991.40
+         sum:                               299955.83
 
 Threads fairness:
-    events (avg/stddev):           84918.0000/0.00
-    execution time (avg/stddev):   59.9914/0.00
+    events (avg/stddev):           426945.0000/0.00
+    execution time (avg/stddev):   299.9558/0.00
 

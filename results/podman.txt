@@ -1,1 +1,327 @@
-sh: /home/user/benchmark.sh: No such file or directory
+
+CPU BENCHMARKS
+------------------------------------------
+------------------------------------------
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Prime numbers limit: 200000
+
+Initializing worker threads...
+
+Threads started!
+
+
+CPU speed:
+    events per second:    23.16
+
+General statistics:
+    total time:                          300.0402s
+    total number of events:              6949
+
+Latency (ms):
+         min:                                   42.66
+         avg:                                   43.18
+         max:                                   79.61
+         95th percentile:                       43.39
+         sum:                               300038.97
+
+Threads fairness:
+    events (avg/stddev):           6949.0000/0.00
+    execution time (avg/stddev):   300.0390/0.00
+
+
+FILEIO BENCHMARKS
+------------------------------------------
+------------------------------------------
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+128 files, 1228800Kb each, 153600Mb total
+Creating files for the test...
+Extra file open flags: (none)
+Creating file test_file.0
+Creating file test_file.1
+Creating file test_file.2
+Creating file test_file.3
+Creating file test_file.4
+Creating file test_file.5
+Creating file test_file.6
+Creating file test_file.7
+Creating file test_file.8
+Creating file test_file.9
+Creating file test_file.10
+Creating file test_file.11
+Creating file test_file.12
+Creating file test_file.13
+Creating file test_file.14
+Creating file test_file.15
+Creating file test_file.16
+Creating file test_file.17
+Creating file test_file.18
+Creating file test_file.19
+Creating file test_file.20
+Creating file test_file.21
+Creating file test_file.22
+Creating file test_file.23
+Creating file test_file.24
+Creating file test_file.25
+Creating file test_file.26
+Creating file test_file.27
+Creating file test_file.28
+Creating file test_file.29
+Creating file test_file.30
+Creating file test_file.31
+Creating file test_file.32
+Creating file test_file.33
+Creating file test_file.34
+Creating file test_file.35
+Creating file test_file.36
+Creating file test_file.37
+Creating file test_file.38
+Creating file test_file.39
+Creating file test_file.40
+Creating file test_file.41
+Creating file test_file.42
+Creating file test_file.43
+Creating file test_file.44
+Creating file test_file.45
+Creating file test_file.46
+Creating file test_file.47
+Creating file test_file.48
+Creating file test_file.49
+Creating file test_file.50
+Creating file test_file.51
+Creating file test_file.52
+Creating file test_file.53
+Creating file test_file.54
+Creating file test_file.55
+Creating file test_file.56
+Creating file test_file.57
+Creating file test_file.58
+Creating file test_file.59
+Creating file test_file.60
+Creating file test_file.61
+Creating file test_file.62
+Creating file test_file.63
+Creating file test_file.64
+Creating file test_file.65
+Creating file test_file.66
+Creating file test_file.67
+Creating file test_file.68
+Creating file test_file.69
+Creating file test_file.70
+Creating file test_file.71
+Creating file test_file.72
+Creating file test_file.73
+Creating file test_file.74
+Creating file test_file.75
+Creating file test_file.76
+Creating file test_file.77
+Creating file test_file.78
+Creating file test_file.79
+Creating file test_file.80
+Creating file test_file.81
+Creating file test_file.82
+Creating file test_file.83
+Creating file test_file.84
+Creating file test_file.85
+Creating file test_file.86
+Creating file test_file.87
+Creating file test_file.88
+Creating file test_file.89
+Creating file test_file.90
+Creating file test_file.91
+Creating file test_file.92
+Creating file test_file.93
+Creating file test_file.94
+Creating file test_file.95
+Creating file test_file.96
+Creating file test_file.97
+Creating file test_file.98
+Creating file test_file.99
+Creating file test_file.100
+Creating file test_file.101
+Creating file test_file.102
+Creating file test_file.103
+Creating file test_file.104
+Creating file test_file.105
+Creating file test_file.106
+Creating file test_file.107
+Creating file test_file.108
+Creating file test_file.109
+Creating file test_file.110
+Creating file test_file.111
+Creating file test_file.112
+Creating file test_file.113
+Creating file test_file.114
+Creating file test_file.115
+Creating file test_file.116
+Creating file test_file.117
+Creating file test_file.118
+Creating file test_file.119
+Creating file test_file.120
+Creating file test_file.121
+Creating file test_file.122
+Creating file test_file.123
+Creating file test_file.124
+Creating file test_file.125
+Creating file test_file.126
+Creating file test_file.127
+161061273600 bytes written in 622.44 seconds (246.77 MiB/sec).
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from seed (1).
+
+
+Extra file open flags: (none)
+128 files, 1.1719GiB each
+150GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+
+
+File operations:
+    reads/s:                      204.68
+    writes/s:                     136.45
+    fsyncs/s:                     436.89
+
+Throughput:
+    read, MiB/s:                  3.20
+    written, MiB/s:               2.13
+
+General statistics:
+    total time:                          300.1692s
+    total number of events:              233414
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    1.28
+         max:                                   26.47
+         95th percentile:                        6.79
+         sum:                               299787.49
+
+Threads fairness:
+    events (avg/stddev):           233414.0000/0.00
+    execution time (avg/stddev):   299.7875/0.00
+
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Removing test files...
+
+MEMORY BENCHMARKS
+------------------------------------------
+------------------------------------------
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 256
+Initializing random number generator from current time
+
+
+Running memory speed test with the following options:
+  block size: 1KiB
+  total size: 102400MiB
+  operation: write
+  scope: global
+
+Initializing worker threads...
+
+Threads started!
+
+Total operations: 104857600 (16179428.09 per second)
+
+102400.00 MiB transferred (15800.22 MiB/sec)
+
+
+General statistics:
+    total time:                          6.4798s
+    total number of events:              104857600
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    0.01
+         max:                                 2189.97
+         95th percentile:                        0.00
+         sum:                              1165189.99
+
+Threads fairness:
+    events (avg/stddev):           409600.0000/0.00
+    execution time (avg/stddev):   4.5515/1.10
+
+
+MUTEX BENCHMARKS
+------------------------------------------
+------------------------------------------
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 512
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+
+General statistics:
+    total time:                          6.7226s
+    total number of events:              512
+
+Latency (ms):
+         min:                                  271.44
+         avg:                                 4598.59
+         max:                                 6418.05
+         95th percentile:                     5918.87
+         sum:                              2354479.63
+
+Threads fairness:
+    events (avg/stddev):           1.0000/0.00
+    execution time (avg/stddev):   4.5986/1.10
+
+
+THREADS BENCHMARKS
+------------------------------------------
+------------------------------------------
+sysbench 1.0.20 (using system LuaJIT 2.1.0-beta3)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Initializing worker threads...
+
+Threads started!
+
+
+General statistics:
+    total time:                          300.0005s
+    total number of events:              373927
+
+Latency (ms):
+         min:                                    0.78
+         avg:                                    0.80
+         max:                                    1.30
+         95th percentile:                        0.84
+         sum:                               299967.22
+
+Threads fairness:
+    events (avg/stddev):           373927.0000/0.00
+    execution time (avg/stddev):   299.9672/0.00
+
