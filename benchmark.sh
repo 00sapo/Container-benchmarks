@@ -1,4 +1,6 @@
 TIME=300
+cd "$(dirname "$0")"
+
 echo
 echo "CPU BENCHMARKS"
 echo "------------------------------------------"
@@ -12,6 +14,13 @@ echo "------------------------------------------"
 
 sysbench fileio --file-total-size=150G prepare
 sysbench fileio --file-total-size=150G --file-test-mode=rndrw --rand-seed=1 --time=$TIME --max-requests=0 run
+
+echo
+echo "FILEIO BENCHMARKS ASYNC"
+echo "------------------------------------------"
+echo "------------------------------------------"
+# see https://www.alibabacloud.com/blog/testing-io-performance-with-sysbench_594709
+sysbench fileio --file-total-size=150G --file-test-mode=rndrw --rand-seed=1 --time=$TIME --max-requests=0 --file-extra-flags=direct --file-io-mode=async --file-fsync-freq=0 run
 sysbench fileio --file-total-size=150G cleanup
 
 echo
